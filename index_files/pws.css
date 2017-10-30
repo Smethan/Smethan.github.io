@@ -128,12 +128,14 @@ a li.game_banner .description{
 	top: 100%;
 	left: 0;
 	right: 0;
+	color: white;
 	transition: 0.2s;
 }
 
 li.game_banner .description h2{
 	font-family: Inconsolata, monospace;
 	margin: 0.6ex 0;
+	color: white;
 	font-weight: bold;
 }
 
@@ -141,14 +143,17 @@ li.game_banner .description h2 .game-date{
 	display: inline-block;
 	font-size: 12pt;
 	font-weight: normal;
+	color: white;
 	margin-left: 8px;
 }
 
 li.game_banner .description p{
 	margin: 0.6ex 0.1em;
+	color: white;
 	line-height: 1.4em;
 }
 
 a:hover li.game_banner .description{
 	top: 20%;
+	color: white;
 }
