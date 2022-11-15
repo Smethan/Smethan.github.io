@@ -5,11 +5,13 @@
     font-family: sans-serif;
 }
 
+$color-primary: #BAE8E8;
+
 // Main grid that the entire body should follow, doesnt define columns
 // So that I can do that on a row by row basis
 body {
     display: grid;
-    grid-template-rows: 0.5fr 5fr 10fr;
+    grid-template-rows: 0.5fr 5fr 10fr 5fr 1fr;
     // height: 100vh;
     width: 100vw;
 }
@@ -22,10 +24,22 @@ header,nav,aside,main,footer {
     align-items: center;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+}
+
+.navbarOffsetMargin {
+    margin-top: 45px;
+}
 // Header and nav content
 header {
     grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    
+    background-color: white;
 
     // Flex display here for better inlining with the logo n such
     .left {
@@ -112,7 +126,7 @@ main {
             }
 
             button {
-                background-color: #BAE8E8;
+                background-color: $color-primary;
                 color: black;
                 border: 2px solid black;
                 padding: 1rem;
@@ -167,7 +181,7 @@ main {
             flex-direction: column;
             justify-content: space-around;
             text-align: center;
-            color: #BAE8E8;
+            color: $color-primary;
             // filter for coloring of the svgs, really weird that its the only way
             img {
                 filter: invert(97%) sepia(52%) saturate(404%) hue-rotate(126deg) brightness(95%) contrast(91%);
@@ -271,4 +285,67 @@ main {
 
 .card__image--portfolio {
     background-image: url("./images/preview.png");
+}
+
+.aboutMeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-primary;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1.5rem;
+        color: grey;
+    }
+}
+
+footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(0, 0, 59);
+    text-align: center;
+    
+    p {
+        color: gray;
+    }
+
+    .leftFooter {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        
+        h2 {
+            margin-left: 0.5rem;
+            color: rgb(213, 210, 210);
+            font-size: 1rem;
+        }
+    }
+    .rightFooter {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+
+        a {
+            display: flex;
+            color: black;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: $color-primary;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
 }

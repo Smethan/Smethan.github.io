@@ -7,7 +7,7 @@
 
 body {
   display: grid;
-  grid-template-rows: 0.5fr 5fr 10fr;
+  grid-template-rows: 0.5fr 5fr 10fr 5fr 1fr;
   width: 100vw;
 }
 
@@ -17,9 +17,22 @@ header, nav, aside, main, footer {
   align-items: center;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbarOffsetMargin {
+  margin-top: 45px;
+}
+
 header {
   grid-template-columns: 2fr 3fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  background-color: white;
 }
 header .left {
   display: flex;
@@ -225,4 +238,62 @@ main .main-container .stuff button:hover {
 
 .card__image--portfolio {
   background-image: url("./images/preview.png");
+}
+
+.aboutMeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #BAE8E8;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+.aboutMe h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.aboutMe p {
+  font-size: 1.5rem;
+  color: grey;
+}
+
+footer {
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(0, 0, 59);
+  text-align: center;
+}
+footer p {
+  color: gray;
+}
+footer .leftFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+footer .leftFooter h2 {
+  margin-left: 0.5rem;
+  color: rgb(213, 210, 210);
+  font-size: 1rem;
+}
+footer .rightFooter {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+footer .rightFooter a {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #BAE8E8;
+  text-transform: uppercase;
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */
