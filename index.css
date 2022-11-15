@@ -30,8 +30,8 @@ header .left {
   grid-row: 2;
   margin-left: 3rem;
 }
-header .left img {
-  font-weight: bold;
+header .left .test {
+  filter: invert(97%) sepia(52%) saturate(404%) hue-rotate(126deg) brightness(95%) contrast(91%);
 }
 header nav {
   display: flex;
@@ -130,15 +130,6 @@ main .main-container .stuff button:hover {
 @media (min-width: 56rem) {
   .main .cards__item {
     width: 33.3333%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .main .flex-grid {
-    display: block;
-  }
-  .main .flex-grid .col {
-    width: 100%;
-    margin: 0 0 10px 0;
   }
 }
 

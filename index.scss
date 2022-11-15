@@ -5,6 +5,8 @@
     font-family: sans-serif;
 }
 
+// Main grid that the entire body should follow, doesnt define columns
+// So that I can do that on a row by row basis
 body {
     display: grid;
     grid-template-rows: 0.5fr 5fr 10fr;
@@ -12,16 +14,20 @@ body {
     width: 100vw;
 }
 
+//alignment things here, helps to non-destructively center text
+
 header,nav,aside,main,footer {
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
+// Header and nav content
 header {
     grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
+    // Flex display here for better inlining with the logo n such
     .left {
         display: flex;
         align-items: center;
@@ -30,12 +36,15 @@ header {
         grid-column: 1;
         grid-row: 2;
         margin-left: 3rem;
+        
 
-        img {
-            font-weight: bold;
+        .test {
+            filter: invert(97%) sepia(52%) saturate(404%) hue-rotate(126deg) brightness(95%) contrast(91%);
+
         }
     }
 
+    // More flex display here, Honestly could just not set grid earlier, idk, don't want to break it
     nav {
         display: flex;
         align-items: center;
@@ -53,7 +62,9 @@ header {
     }
 }
 
+// Hero thing
 main {
+    //Grid used here for reasons unknown, but it works
     grid-template-columns: 2fr 1fr;
     margin-left: 10rem;
     margin-right: 10rem;
@@ -61,6 +72,7 @@ main {
     .main-container {
         display: grid;
         grid-template-rows: 1fr 3fr 1fr;
+        //Have to use 2 divs here for centering stuff
 
         .stuff {
             grid-row: 2;
@@ -96,23 +108,27 @@ main {
     }
 }
 
+//Definitely not confusing class name main, but this is actually the meat and potatoes
 .main {
+
+    //Switched to flex here, and I do not regret it, mostly
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
+    // container for skills for flex direction
     .skills {
         display: flex;
         flex-direction: row;
         margin-top: 5rem;
-
+        // skill issue
         .skill {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             text-align: center;
             color: #BAE8E8;
+            // filter for coloring of the svgs, really weird that its the only way
             img {
                 filter: invert(97%) sepia(52%) saturate(404%) hue-rotate(126deg) brightness(95%) contrast(91%);
                 padding: 1rem;
@@ -121,10 +137,12 @@ main {
         
     }
 
+    //Literally just for the margin lmao
     #projects {
         margin-top: 5rem;
     }
 
+    // Cards container, flex display for responsiveness, should be put on <ul>
     .cards {
         display: flex;
         flex-wrap: wrap;
@@ -133,7 +151,8 @@ main {
         margin: 0;
         padding: 0;
     }
-      
+
+    // Card styling, should be put on <li>, should be responsive
     .cards__item {
         display: flex;
         padding: 1rem;
@@ -144,20 +163,10 @@ main {
           width: 33.3333%;
         }
     }
-
-    @media screen and (max-width: 768px) {
-        .flex-grid {
-            display: block;
-
-            .col {
-                width: 100%;
-                margin: 0 0 10px 0;
-                
-              }
-        }
-    }
 }
 
+// Individual card styling, contains all the pieces of a card
+// Refer to https://codepen.io/mcraiganthony/pen/NxGxqm for the original code
 .card {
     display: flex;
     flex-direction: column;
@@ -215,6 +224,7 @@ main {
     }
 }
 
+//Image section, put on <div>. Could just use image tags but it isnt how the person online did it :P
 .card__image--placeholder {
     background-image: url("./images/Group\ 45.png");
 }
