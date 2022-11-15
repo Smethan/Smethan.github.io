@@ -82,9 +82,23 @@ header nav a {
   }
 }
 main {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   margin-left: 10rem;
-  margin-right: 10rem;
+  margin-right: 3rem;
+}
+main .picture {
+  margin-left: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/Ethan.JPG");
+  overflow: hidden;
+  position: relative;
+}
+main .picture::before {
+  content: "";
+  display: block;
+  padding-top: 120%;
 }
 main .main-container {
   display: grid;

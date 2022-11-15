@@ -12,7 +12,7 @@
         
 
         function scrollToAbout() {
-            const element = document.getElementsById("about")
+            const element = document.getElementById("about")
 
             element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         }
@@ -29,7 +29,7 @@
         </div>
         <nav>
             <a href="">Home</a>
-            <a href="javascript:scrollToBottom()">About</a>
+            <a href="javascript:scrollToAbout()">About</a>
             <a href="mailto:ethanhargus@gmail.com">Contact</a>
             <span class="burger material-symbols-outlined">menu</span>
         </nav>
@@ -61,7 +61,7 @@
                 <button onclick="window.location.href='https://github.com/Smethan'">Take a look at my work</button>
             </div>
         </div>
-        <div class="picture"><br/></div>
+        <div class="picture"></div>
     </main>
     <!-- Skills section -->
     <div class="main">
@@ -174,7 +174,11 @@
     <div class="aboutMeContainer" id="about">
         <div class="aboutMe">
             <h1>About me</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ad minus molestias quibusdam illum ex impedit laborum architecto eius eaque voluptatibus nemo ipsum, iusto blanditiis possimus aperiam debitis quis fuga.</p>
+            <p>I've been programming for about 8 years now, started with Python but mostly write in either JS or TypeScript these days.</p>
+            <br/>
+            <p>I've dabbled in machine learning, and attended a bootcamp at the end of 2021 where I learned React, among other things.</p>
+            <br/>
+            <p>Right now I am employed at _nology as a Trainee Cloud Engineer!</p>
         </div>
     </div>
     <footer>
